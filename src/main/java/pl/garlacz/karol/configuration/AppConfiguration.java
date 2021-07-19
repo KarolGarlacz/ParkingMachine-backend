@@ -25,8 +25,8 @@ public class AppConfiguration {
         return null;
     }
 
-    @Bean
+    /*@Bean
     public SessionFactory sessionFactory(){
         return new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
-    }
+    }*/
 }

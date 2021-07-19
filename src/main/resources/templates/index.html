@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Parking Machine</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="info-menu">
+                <div class="quantity"><p>dostepne miejsca:100/100</p></div>
+                <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+            </div>
+            <div class="main-menu">
+            <div class="car-form-information">
+                <form action="" class="xxx">
+                    <p>Wprowadź swoj samochód</p>
+                    <input class="info-info" type="text" placeholder="Rejestracja">
+                    <input class ="info-info" type="text" placeholder="Marka samochodu">
+                    <div class="confirm">
+                    <input class="submit" type="submit" value="Wyjedź">
+                    <input class="submit" type="submit" value="Wjedź"></div>
+                </form>
+                
+            </div>
+            <div class="machine-automat">
+                    <div class="choice">
+                        <a href="/ticket">Kup Bilet</a>
+                        <a href="/abonament">Abonament</a>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

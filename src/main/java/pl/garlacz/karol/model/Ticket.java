@@ -1,28 +1,28 @@
 package pl.garlacz.karol.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "tticket")
+
 public class Ticket {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
     private String brand;
     private String model;
     private String plate;
+    private int quantity;
 
     public Ticket() {
     }
 
-    public Ticket(int id, String brand, String model, String plate) {
+    public Ticket(int id, String brand, String model, String plate, int quantity) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.plate = plate;
+        this.quantity = quantity;
     }
+
+
 
     public int getId() {
         return id;
@@ -54,5 +54,13 @@ public class Ticket {
 
     public void setPlate(String plate) {
         this.plate = plate;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

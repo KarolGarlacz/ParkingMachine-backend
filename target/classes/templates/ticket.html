@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Parking Machine</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="info-menu">
+                <div class="quantity"><p>dostepne miejsca:100/100</p></div>
+                <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+            </div>
+            <div class="main-menu">
+            <div class="car-form-information" method="post">
+                <form action="" class="xxx">
+                    <p>Wprowadź swoj samochód</p>
+                    <input class="info-info" type="text" placeholder="Rejestracja">
+                    <input class ="info-info" type="text" placeholder="Marka samochodu">
+                    <div class="confirm">
+                        <input class="submit" type="submit" value="Wyjedź">
+                        <input class="submit" type="submit" value="Wjedź"></div>
+                </form>
+                
+            </div>
+            <div class="machine-automat">
+                <div class="ticket-wrap">
+                    <form class="ticket-info" method="post">
+                      <p> Wprowadź swoje auto:</p>
+                      <input class="info-info" type="text" placeholder="Model samochodu" th:field="*{ticket.brand}"/>
+                      <input class="info-info" type="text" placeholder="Marka samochodu" th:field="*{ticket.model}"/>
+                      <input class="info-info" type="text" placeholder="Rejestracja" th:field="*{ticket.plate}"/>
+                        <input type="submit" value="Wyślij" class="submit" />
+                      <p> Wybierz taryfe:</p>
+                      <div class="taryfa">
+                      <input type="submit" value="Taryfa 1" class="submit" />
+                      <input type="submit" value="Taryfa 2" class="submit" />
+                      <input type="submit" value="Taryfa 3" class="submit" />
+                      <input type="submit" value="Taryfa 4" class="submit" /></div>
+                      <input type="submit" value="Płatność" class="submit" />
+                      <input type="submit" value="Powrót" class="submit" />
+                    </form>
+                </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
